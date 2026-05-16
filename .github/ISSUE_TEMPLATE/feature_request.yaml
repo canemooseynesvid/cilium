@@ -1,0 +1,76 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for Cilium
+labels: ["kind/feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature!
+        Please fill out the sections below to help us understand your request.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following before submitting your feature request.
+      options:
+        - label: I have searched the [issue tracker](https://github.com/cilium/cilium/issues) for similar feature requests.
+          required: true
+        - label: I have read the [contributing guide](https://docs.cilium.io/en/stable/contributing/development/).
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem is.
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+      placeholder: Describe the feature or enhancement you are requesting.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Which area of Cilium does this feature request relate to?
+      multiple: true
+      options:
+        - Datapath / eBPF
+        - Networking
+        - Network Policy
+        - Load Balancing
+        - Hubble / Observability
+        - Cluster Mesh
+        - Encryption
+        - Helm / Installation
+        - CLI
+        - Documentation
+        - CI / Testing
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add any other context, screenshots, or references about the feature request here.
+    validations:
+      required: false
