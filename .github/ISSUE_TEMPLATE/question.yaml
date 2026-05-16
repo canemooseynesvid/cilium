@@ -1,0 +1,41 @@
+name: Question
+description: Ask a question about Cilium
+labels: ["kind/question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking a question! Before submitting, please check:
+        - [Documentation](https://docs.cilium.io)
+        - [Slack](https://cilium.io/slack) for real-time community support
+        - [GitHub Discussions](https://github.com/cilium/cilium/discussions)
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like to know?
+      placeholder: Describe your question in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide any relevant context, configuration, or environment details.
+      placeholder: |
+        - Cilium version:
+        - Kubernetes version:
+        - Cloud provider / bare metal:
+        - CNI configuration:
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: docs-checked
+    attributes:
+      label: Documentation checked
+      options:
+        - label: I have checked the [documentation](https://docs.cilium.io) and could not find an answer.
+          required: true
